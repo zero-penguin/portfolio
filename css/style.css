@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+.container{
+  width: auto;
+  height: 800px;
+}
+
+.input_page{
+  position: fixed;
+  bottom: 30px;
+  align-items: center;
+  padding: 20px;
+  transition: .2s;
+  opacity: 0;
+  height: auto;
+  width: auto;
+}
+
 /* Global Styles */
 body {
   font-family: 'Open Sans', sans-serif;

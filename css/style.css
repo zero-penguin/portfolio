@@ -17,11 +17,12 @@
   padding: 20px;
   transition: .9s;
   opacity: 0;
-  height: 90%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
 }
 
 .scroll_left {
+  color:#1a0902;
   -webkit-transition: 0.8s ease-in-out;
   -moz-transition: 0.8s ease-in-out;
   -o-transition: 0.8s ease-in-out;
@@ -38,26 +39,27 @@
   transform: translateX(0);
 }
 
+.scroll_left h2 {
+  color:rgb(8, 8, 8)
+}
+
 /* Global Styles */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Helvetica Neue",
+  Arial,
+  "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
-  background-color: #faefc1;
+  color: #060000;
+  background-color: #f5e5d5;
 }
 
 h1, h2, h3 {
   font-weight: bold;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* Header Styles */
@@ -66,20 +68,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: #f4ba73;
+  background-color: #f5f1ec;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  font-size: 2.5rem;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav li:not(:last-child) {
-  margin-right: 2rem;
 }
 
 video {
@@ -92,16 +82,15 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+.name {
+  opacity: 0;
+}
 
 /* Main Styles */
 main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-}
-
-section {
-  margin-bottom: 4rem;
 }
 
 h2 {
@@ -114,25 +103,55 @@ h2 {
   height: 200px;
 }
 
+.mail{
+  transform: translate(0,0);
+  background-color: #efd072;
+}
+
 .contact {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  bottom: 30px;
 }
 
-.contact a {
-  margin: 0 20px;
+.slideshow-container {
+  width: 800px;
+  margin: 0 auto;
 }
 
-.contact img {
-  height: 100px;
+.slideshow {
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slideshow img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slideshow img.previous {
+  right: 100%;
+}
+
+.slideshow img.next {
+  right: -100%;
 }
 
 /* Footer Styles */
 footer {
-  background-color: #eedd79;
+  background-color: #060606;
   padding: 1rem;
   text-align: center;
-  border-top: 1px solid #ec4108;
+  border-top: 1px solid #0f0e0e;
+  color:#fffefd;
 }

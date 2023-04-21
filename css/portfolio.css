@@ -1,0 +1,15 @@
+ul#slide {
+  margin:0;
+  padding:0;
+  width:100px;
+  height:100px;
+  position:relative;
+}
+ul#slide li {
+  margin:0;
+  padding:0;
+  position:absolute;
+  top:0;
+  left:0;
+  list-style:none;
+}
